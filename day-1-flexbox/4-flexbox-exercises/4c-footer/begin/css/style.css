@@ -154,6 +154,42 @@ figcaption a {
 }
 
 
+/* footer section design*/
+footer{
+    padding:3rem;
+    display:flex;
+    flex-flow:row wrap;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.footer{
+    background-color: var(--color5);
+}
+footer h4{
+    margin-top: 0;
+}
+/* this puts the two social media icons next to each other*/
+footer ul{
+    text-decoration: none;
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-flow: row wrap;
+}
+
+footer address{
+    font-style: normal;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+footer li{
+    list-style-type: none;
+    margin-right: 1rem;
+}
+
+
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
 @media (min-width: 550px) {
@@ -162,7 +198,8 @@ figcaption a {
         flex-flow: row wrap;
         justify-content: space-between;
     }
-    section li {
+    section li,
+    .social,.address {
         flex-basis: 49.5%;
     }
     /* turn off object position, inherit object-fit: cover */
@@ -180,6 +217,9 @@ figcaption a {
         shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);
         max-height: 211px;
     }
+    footer address{
+        margin-top: 0;
+    }
 }
 
 @media (min-width: 800px) {
@@ -188,5 +228,11 @@ figcaption a {
     }
     section li {
         flex-basis: 32.5%;
+    }
+    .social{
+        flex-basis: 32.5%;
+    }
+    .address{
+        flex-basis: 65.5%;
     }
 }
